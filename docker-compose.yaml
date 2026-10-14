@@ -1,0 +1,29 @@
+services:
+  backend:
+    build: backend
+    hostname: backend-host
+    volumes:
+      - ./backend:/app
+    ports:
+      - "5000:5000"  # Local Port : Container Port
+    networks:
+      - assignment-network
+  
+  frontend:
+    build: frontend
+    hostname: frontend-host
+    volumes:
+      - ./frontend:/app
+    environment:
+      - BACKEND_URL=http://backend-host:5000
+    ports:
+      - "4000:5070" # Local Port : Container Port
+    links:
+      - backend # Backend has to be linked
+    depends_on:
+      - backend # Basically tells this front end is depends on backend
+    networks:
+      - assignment-network
+
+networks:
+  assignment-network: {}

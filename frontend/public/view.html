@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Data</title>
+</head>
+<body>
+    <h1>User List</h1>
+    <ul>
+        <% if (Array.isArray(items)) { %>
+        <% items.forEach(function(item) { %>
+      <li>
+        <strong>Name:</strong> <%= item.name %> 
+        <strong>Email:</strong> <%= item.email %> 
+        <strong>Age:</strong> <%= item.age %>
+      </li>
+        <% }); %>
+        <% } else { %>
+        <li>No items found or data is invalid.</li>
+        <% } %>
+    </ul>
+</body>
+</html>

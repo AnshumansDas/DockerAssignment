@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Frontend</title>
+    </head>
+    <body>
+        <h1>Frontend</h1>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <ul>
+                            <% data.data.forEach(item => { %>
+                                <li>
+                                    <strong>Name:</strong> <%= item.name %>
+                                    <strong>Email:</strong> <%= item.email %>
+                                    <strong>Age:</strong> <%= item.age %>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>        
+    </body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            color: #491a1a;
+        }
+        div {
+            margin: 20px auto;
+            width: 80%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</html>
