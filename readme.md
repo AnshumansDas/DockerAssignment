@@ -1,3 +1,3 @@
 DOCKER ARCHETECTURE TUTORIAL
 
-![Logo](https://www.malwarebytes.com/wp-content/uploads/sites/2/2026/07/GitHub_logo.png?w=600)
+![Logo](https://www.cantech.in/blog/wp-content/uploads/2025/02/Docker-Architecture-1024x528.png?w=600)
